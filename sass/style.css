@@ -1,0 +1,26 @@
+.text, .textarea, .h1 {
+  color: red;
+  font-size: 20px;
+}
+
+.btn {
+  border: 5px solid red;
+}
+
+.h1 {
+  color: black;
+}
+
+.h2 {
+  color: white;
+}
+
+.test {
+  content: "html5";
+}
+
+.test2 {
+  content: "react";
+}
+
+/*# sourceMappingURL=style.css.map */

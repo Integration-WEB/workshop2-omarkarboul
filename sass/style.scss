@@ -1,0 +1,57 @@
+$blanc : #ffff ;
+.text {
+    color: red;
+    font-size: 20px;
+}
+
+.textarea {
+    @extend .text;
+}
+
+.h1{
+    @extend .textarea;
+}
+
+@mixin border_button($p1:3px, $p2:solid, $p3:yellow) {
+    border : $p1 $p2 $p3;
+}
+
+.btn{
+    @include border_button(5px , solid , red); 
+}
+
+@function backgroundd($color){
+    @if ($color == white) {
+       @return black;
+    }@else
+    {
+        @return white;
+    }
+}
+
+.h1{
+    color: backgroundd(white);
+}
+
+.h2{
+    color: backgroundd(blue);
+}
+
+$langage : "html5", "css3", "java" , "react" ; 
+
+@function premire($list){
+    @return nth($list , 1);
+}
+
+@function dernier($list){
+    @return nth($list,-1);
+}
+
+
+.test{
+    content: premire($langage);
+}
+
+.test2{
+    content: dernier($langage);
+}
